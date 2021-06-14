@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './styles/App.css';
+import Card from './components/Card';
+import NavBar from './components/NavBar';
 
-function App() {
+import Sillon from './assets/sillon.jpg'
+import Mesa from './assets/mesa-ratona.jpg'
+import Sofa from './assets/sofa.jpg'
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div><div className="navegador">
+    <NavBar/>
+  </div>
+    <div className="main">
+      
+  <Card nombre="Sillon" precio="$20000" imagen={Sillon}/>
+  <Card nombre="Mesa" precio="$10000" imagen={Mesa}/>
+  <Card nombre="Sofa" precio="$40000" imagen={Sofa}/>
+  </div>
+  </div>
   );
+
 }
 
 export default App;
